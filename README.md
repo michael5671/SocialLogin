@@ -17,7 +17,7 @@ $ npm install
 $ npm run dev   
 
 ### Ports
-mysql: 4306  
-nginx: 8080  
-phpmyadmin: 8081  
-react: 5173  
+- mysql: 4306  
+- nginx: 8080  
+- phpmyadmin: 8081  
+- react: 5173  
