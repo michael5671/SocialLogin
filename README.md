@@ -1,4 +1,5 @@
 # SocialLoginLaravel-Reacjs  
+A web application that integrates **Google OAuth Login**. It includes a **React + Vite** frontend and a **Laravel** backend, containerized using Docker.
 
 ## Backend:  
 $ cd SocialLogin/Backend  
