@@ -1,5 +1,6 @@
+# SocialLoginLaravel-Reacjs  
 
-Backend:  
+## Backend:  
 $ cd SocialLogin/Backend  
 $ cp .env.example .env  
 $ docker-compose up --build -d  
@@ -8,13 +9,13 @@ $ docker compose exec php php artisan key:generate
 $ docker compose exec php chmod -R 777 storage bootstrap/cache  
 $ docker compose exec php php artisan migrate  
 
-Fontend:  
+## Fontend:  
 $ cd SocialLogin/Fontend  
 $ nvm use 20  
 $ npm install  
 $ npm run dev   
 
-Ports:  
+### Ports
 mysql: 4306  
 nginx: 8080  
 phpmyadmin: 8081  
