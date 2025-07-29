@@ -14,3 +14,8 @@ $ nvm use 20
 $ npm install  
 $ npm run dev   
 
+Ports:  
+mysql: 4306
+nginx: 8080
+phpmyadmin: 8081
+react: 5173
