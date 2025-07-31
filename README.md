@@ -24,7 +24,7 @@ $ npm run dev
 
 ## 2.2.Frontend Setup (Laravel Blade + Tailwind):
 $ cd SocialLogin/Backend  
-$ docker compose exec php npm run dev
+$ npm run dev
 
 ### Ports
 - mysql: 4306  
