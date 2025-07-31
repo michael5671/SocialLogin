@@ -23,7 +23,7 @@ $ npm install
 $ npm run dev   
 
 ## 2.2.Frontend Setup (Laravel Blade + Tailwind):
-$ cd SocialLogin/Backend
+$ cd SocialLogin/Backend  
 $ docker compose exec php npm run dev
 
 ### Ports
