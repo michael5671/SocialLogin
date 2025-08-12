@@ -53,6 +53,27 @@ class GoogleController extends Controller
         $phone = $peopleData['phoneNumbers'][0]['value'] ?? null;
         $address = $peopleData['addresses'][0]['formattedValue'] ?? null;
 
+        //Geocode địa chỉ để lấy lat/lng
+        $lat = $lng = $placeId = null;
+        if ($address) {
+            $geoRes = $client->get('https://maps.googleapis.com/maps/api/geocode/json', [
+                'query' => [
+                    'address' => $address,
+                    'key' => env('GOOGLE_MAPS_API_KEY'),
+                ]
+            ]);
+            $geo = json_decode($geoRes->getBody(), true);
+            if (($geo['status'] ?? '') === 'OK') {
+                $loc = $geo['results'][0]['geometry']['location'];
+                $lat = $loc['lat'];
+                $lng = $loc['lng'];
+                $placeId = $result['place_id']??null;
+                $address = $result['formatted_address'] ?? $address;
+
+                $address = $geo['results'][0]['formatted_address'] ?? $address;
+            }
+        }
+
         // Lưu vào DB
         $user = \App\Models\User::updateOrCreate(
             ['email' => $googleUser->getEmail()],
@@ -63,6 +84,9 @@ class GoogleController extends Controller
                 'birth_date' => $birthDate,
                 'phone' => $phone,
                 'address' => $address,
+                'lat' => $lat,
+                'lng' => $lng,
+                'place_id' =>$placeId,
                 'google_id' => $googleUser->getId(),
                 'password' => \Illuminate\Support\Facades\Hash::make(\Illuminate\Support\Str::random(16)),
             ]

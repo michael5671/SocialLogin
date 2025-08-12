@@ -28,7 +28,10 @@ class User extends Authenticatable
         'phone',
         'address',
         'avatar',
-        'remember_token'
+        'remember_token',
+        'lat',
+        'lng',
+        'place_id'
     ];
 
     /**

@@ -40,5 +40,12 @@ return [
         'redirect' => env('GOOGLE_REDIRECT_URI'),
     ],
 
-
+    'serpapi' => [
+        'key' => env('SERPAPI_KEY'),
+        'base' => 'https://serpapi.com/search',
+    ],
+    'googlemaps' => [
+        'key' => env('GOOGLE_MAPS_KEY'),
+        'geocode' => 'https://maps.googleapis.com/maps/api/geocode/json',
+    ],
 ];
