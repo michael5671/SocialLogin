@@ -1,6 +1,13 @@
 # SocialLoginLaravel-Reacjs  
 A web application that integrates **Google OAuth Login**. 
-It includes two frontend implementations:
+After a successful login, the system fetches more user profile information such as:
+- Phone number
+- Birthday
+- Address
+- Gender
+This data is displayed on the User Dashboard.
+
+This includes two frontend implementations:
 1. **React + Vite + MUI** frontend.
 2. **Laravel Blade + Tailwind** frontend.
 
