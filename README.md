@@ -4,7 +4,7 @@ After a successful login, the system fetches more user profile information such 
 - Phone number
 - Birthday
 - Address
-- Gender 
+- Gender  
 This data is displayed on the User Dashboard.
 
 This includes two frontend implementations:
