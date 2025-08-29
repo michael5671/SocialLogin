@@ -24,7 +24,7 @@ $ docker compose exec php php artisan key:generate
 $ docker compose exec php chmod -R 777 storage bootstrap/cache  
 $ docker compose exec php php artisan migrate  
 
-## 2.1.Fontend Setup (React + Vite + MUI):  
+## 2.1.Frontend Setup (React + Vite + MUI):  
 $ cd SocialLogin/Fontend  
 $ nvm use 20  
 $ npm install  
